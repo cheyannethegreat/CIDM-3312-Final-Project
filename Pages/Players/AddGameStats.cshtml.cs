@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace CIDM_3312_Final_Project.Pages
+namespace CIDM_3312_Final_Project.Models
 {
     public class AddGameStats : PageModel
     {

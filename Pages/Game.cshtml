@@ -1,0 +1,33 @@
+@page
+@model Game.Model
+
+@{
+    ViewData["Title"] = "Game Details";
+}
+
+<h1>@Html.DisplayFor(model => model.Game.ID)</h1>
+
+<div>
+    <h4>Game</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Game.ID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Game.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Game.Players)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Game.Score)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Game.winOrLoss)
+        </dt>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Index">Home</a>
+</div>

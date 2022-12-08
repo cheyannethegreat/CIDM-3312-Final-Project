@@ -16346,6 +16346,11 @@
       "FilePath": "/Users/cheyannejones/C#/FinalProject/CIDM-3312-Final-Project/Pages/Index.cshtml",
       "TargetPath": "Pages\\Index.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/cheyannejones/C#/FinalProject/CIDM-3312-Final-Project/Pages/Players/Edit.cshtml",
+      "TargetPath": "Pages\\Players\\Edit.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"
