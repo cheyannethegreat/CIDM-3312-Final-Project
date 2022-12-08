@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 
-namespace CIDM_3312_Final_Project
+namespace CIDM_3312_Final_Project.Models
 {
     public class GameStats
     {
@@ -14,8 +11,8 @@ namespace CIDM_3312_Final_Project
         public int assists {get; set;}
         public int blocks {get; set;}
         public int saves {get; set;}
-        public int takaways {get; set;}
-        public string? timePlayed {get; set;}
+        public int takeaways {get; set;}
+        public int timePlayed {get; set;}
 
     }
 }

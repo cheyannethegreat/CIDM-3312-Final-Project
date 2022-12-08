@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 
-namespace CIDM_3312_Final_Project
+namespace CIDM_3312_Final_Project.Models
 {
     public class Game
     {

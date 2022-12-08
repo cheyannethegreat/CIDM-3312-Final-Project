@@ -1,0 +1,27 @@
+@page
+@model PlayersModel
+@{
+    ViewData["Title"] = "Players";
+}
+<h3>Players</h3>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div class="form-group">
+                <label asp-for="Player.PlayerId"></label>
+                <select asp-for="Player.PlayerId" asp-items="Model.PlayerDropDown" class="form-control">
+                    <option value="">-- Select Player --</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<hr />
+@if (Model.Player != null)
+{
+    <p>You selected @Model.Player.FirstName @Model.Player.LastName</p>
+}

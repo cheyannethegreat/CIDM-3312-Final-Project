@@ -16318,8 +16318,8 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/cheyannejones/C#/FinalProject/CIDM-3312-Final-Project/Pages/Stats.cshtml",
-      "TargetPath": "Pages\\Stats.cshtml",
+      "FilePath": "/Users/cheyannejones/C#/FinalProject/CIDM-3312-Final-Project/Pages/Players/AddGameStats.cshtml",
+      "TargetPath": "Pages\\Players\\AddGameStats.cshtml",
       "FileKind": "mvc"
     },
     {
