@@ -16,7 +16,7 @@ public class PlayerModel : PageModel
 
     public PlayerModel(PlayerContext context, ILogger<PlayerModel> logger)
     {
-        _context = context; // Read in DbContext here
+        _context = context; 
         _logger = logger;
     }
 

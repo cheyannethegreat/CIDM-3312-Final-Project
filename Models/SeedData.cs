@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 
-// Step 7: Seed Data Class
+
 namespace CIDM_3312_Final_Project.Pages
 {
     public static class SeedData

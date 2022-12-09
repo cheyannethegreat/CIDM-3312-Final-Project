@@ -16328,6 +16328,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/cheyannejones/C#/FinalProject/CIDM-3312-Final-Project/Pages/Players/Index.cshtml",
+      "TargetPath": "Pages\\Players\\Index.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/cheyannejones/C#/FinalProject/CIDM-3312-Final-Project/Pages/Game.cshtml",
       "TargetPath": "Pages\\Game.cshtml",
       "FileKind": "mvc"
