@@ -1,9 +1,8 @@
-using CIDM_3312_Final_Project.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace CIDM_3312_Final_Project.Models
+namespace CIDM_3312_Final_Project.Pages;
 {
     public class GameModel : PageModel
     {
@@ -16,20 +15,18 @@ namespace CIDM_3312_Final_Project.Models
 
         public Game Game { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+    public IActionResult OnGet(int? id)
+    {
+        if (id == null)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            Game = await _context.GameStats.FirstOrDefaultAsync(m => m.Id == id);
-
-            if (Game == null)
-            {
-                return NotFound();
-            }
-            return Page();
+            return NotFound();
         }
+
+        if (Game == null)
+        {
+            return NotFound();
+        }
+        return Page();
     }
+}
 }

@@ -1,9 +1,8 @@
-using CIDM_3312_Final_Project.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace CIDM_3312_Final_Project.Models
+namespace CIDM_3312_Final_Project.Pages;
 {
     public class AddGameStats : PageModel
     {
@@ -37,5 +36,15 @@ namespace CIDM_3312_Final_Project.Models
 
             return RedirectToPage("./Index");
         }
+
+    private class context
+    {
+        public static object? GameStats { get; internal set; }
+
+        internal static void SaveChanges()
+        {
+            throw new NotImplementedException();
+        }
     }
+}
 }

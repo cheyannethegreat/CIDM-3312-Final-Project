@@ -1,5 +1,5 @@
 @page
-@model Edit.Model
+@model EditModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -13,7 +13,7 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Player.PlayerId" />
+            <input type="hidden" asp-for="Player.playerID" />
             <div class="form-group">
                 <label asp-for="Player.firstName" class="control-label"></label>
                 <input asp-for="Player.firstName" class="form-control" />

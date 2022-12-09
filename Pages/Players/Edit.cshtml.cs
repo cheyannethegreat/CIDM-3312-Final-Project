@@ -1,9 +1,8 @@
-using CIDM_3312_Final_Project.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace CIDM_3312_Final_Project.Models
+namespace CIDM_3312_Final_Project.Pages;
 {
     public class EditModel : PageModel
     {
@@ -17,25 +16,23 @@ namespace CIDM_3312_Final_Project.Models
         [BindProperty]
         public Player Player { get; set; }
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+    public IActionResult OnGet(int? id)
+    {
+        if (id == null)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            Player = await _context.Player.FirstOrDefaultAsync(m => m.playerID == id);
-
-            if (Player == null)
-            {
-                return NotFound();
-            }
-            return Page();
+            return NotFound();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://aka.ms/RazorPagesCRUD.
-        public async Task<IActionResult> OnPostAsync()
+        if (Player == null)
+        {
+            return NotFound();
+        }
+        return Page();
+    }
+
+    // To protect from overposting attacks, enable the specific properties you want to bind to, for
+    // more details, see https://aka.ms/RazorPagesCRUD.
+    public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
@@ -63,9 +60,8 @@ namespace CIDM_3312_Final_Project.Models
             return RedirectToPage("./Index");
         }
 
-        private bool PlayerExists(int id)
-        {
-            return _context.Player.Any(e => e.playerID == id);
-        }
+    private bool PlayerExists(int playerID)
+    {
+        throw new NotImplementedException();
     }
 }

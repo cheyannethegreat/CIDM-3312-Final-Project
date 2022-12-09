@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
-
-namespace CIDM_3312_Final_Project.Models
+namespace CIDM_3312_Final_Project.Pages
 {
     public class Game
     {

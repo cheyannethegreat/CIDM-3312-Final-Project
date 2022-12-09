@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace CIDM_3312_Final_Project.Models
+namespace CIDM_3312_Final_Project.Pages
 {
     
     public class Player
@@ -11,6 +11,6 @@ namespace CIDM_3312_Final_Project.Models
         public string? lastName { get; set; }
         public int number {get; set;}
         public string? position { get; set; }
-        public List<GameStats> GameStats {get; set;}
+        public List<GameStats>? GameStats {get; set;}
     }
 }

@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-namespace CIDM_3312_Final_Project.Models
+namespace CIDM_3312_Final_Project.Pages
 {
     public class PlayerContext : DbContext
 	{

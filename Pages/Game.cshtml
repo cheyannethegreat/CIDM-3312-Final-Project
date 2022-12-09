@@ -1,24 +1,24 @@
 @page
-@model Game.Model
+@model GameModel
 
 @{
     ViewData["Title"] = "Game Details";
 }
 
-<h1>@Html.DisplayFor(model => model.Game.ID)</h1>
+<h1>@Html.DisplayFor(model => model.Game.gameID)</h1>
 
 <div>
     <h4>Game</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Game.ID)
+            @Html.DisplayNameFor(model => model.Game.gameID)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.Game.Date)
+            @Html.DisplayFor(model => model.Game.gameDate)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Game.Players)
+            @Html.DisplayNameFor(model => model.Game.gamePlayers)
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Game.Score)

@@ -1,5 +1,5 @@
 @page
-@model PlayersModel
+@model PlayerModel
 @{
     ViewData["Title"] = "Players";
 }
@@ -9,8 +9,8 @@
     <div class="col-md-4">
         <form method="post">
             <div class="form-group">
-                <label asp-for="Player.PlayerId"></label>
-                <select asp-for="Player.PlayerId" asp-items="Model.PlayerDropDown" class="form-control">
+                <label asp-for="Player.playerID"></label>
+                <select asp-for="Player.playerID" asp-items="Model.PlayerDropDown" class="form-control">
                     <option value="">-- Select Player --</option>
                 </select>
             </div>
@@ -23,5 +23,5 @@
 <hr />
 @if (Model.Player != null)
 {
-    <p>You selected @Model.Player.FirstName @Model.Player.LastName</p>
+    <p>You selected @Model.Player.firstName @Model.Player.lastName</p>
 }
