@@ -22,14 +22,14 @@ public class PlayerModel : PageModel
 
     public void OnGet()
     {
-        Players = _context.Player.ToList();
+        Players = _context.Players.ToList();
         PlayerDropDown = new SelectList(Players, "PlayerID", "firstName", "lastName");
     }
 
     public void OnPost()
     {
-        Player = _context.Player.Find(Player.playerID)!;
-        Players = _context.Player.ToList();
+        Player = _context.Players.Find(Player.playerID)!;
+        Players = _context.Players.ToList();
         PlayerDropDown = new SelectList(Players, "PlayerID", "firstName", "lastName");
     }
 }

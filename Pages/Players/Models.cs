@@ -6,7 +6,7 @@ namespace CIDM_3312_Final_Project
     {
         internal class PlayerContext
         {
-            internal readonly object Player;
+            internal readonly object? Player;
 
             internal object Attach(Player player)
             {
@@ -14,6 +14,11 @@ namespace CIDM_3312_Final_Project
             }
 
             internal Task SaveChangesAsync()
+            {
+                throw new NotImplementedException();
+            }
+
+            public static implicit operator PlayerContext(Pages.PlayerContext v)
             {
                 throw new NotImplementedException();
             }

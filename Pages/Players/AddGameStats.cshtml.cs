@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace CIDM_3312_Final_Project.Pages;
-{
     public class AddGameStats : PageModel
     {
         private readonly ILogger<AddGameStats> _logger;
@@ -21,7 +20,7 @@ namespace CIDM_3312_Final_Project.Pages;
 
         public void OnGet()
         {
-            PlayersDropDown = new SelectList(_context.Player.ToList(), "PlayerId", "FirstName");
+            PlayersDropDown = new SelectList(_context.Players.ToList(), "playerID", "firstName");
         }
 
         public IActionResult OnPost()
@@ -30,8 +29,6 @@ namespace CIDM_3312_Final_Project.Pages;
             {
                 return Page();
             }
-
-            _context.GameStats.Add(GameStats);
             _context.SaveChanges();
 
             return RedirectToPage("./Index");
@@ -46,5 +43,4 @@ namespace CIDM_3312_Final_Project.Pages;
             throw new NotImplementedException();
         }
     }
-}
 }

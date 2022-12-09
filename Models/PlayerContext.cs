@@ -1,13 +1,19 @@
 using Microsoft.EntityFrameworkCore;
+
+
 namespace CIDM_3312_Final_Project.Pages
 {
-    public class PlayerContext : DbContext
+	public class PlayerContext : DbContext
 	{
-		public PlayerContext (DbContextOptions<PlayerContext> options)
-			: base(options)
-		{
+        public PlayerContext(DbContextOptions options) : base(options)
+        {
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlite("Data Source=database.db");
 		}
-		public DbSet<Player> Player {get; set;} = default!;
-        public object GameStats { get; set; }
-    }
+		public DbSet<Player>? Players {get; set;}
+		public DbSet<GameStats>? GameStats {get; set;}
+	}
 }

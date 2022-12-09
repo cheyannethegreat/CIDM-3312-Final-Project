@@ -9,12 +9,12 @@ namespace CIDM_3312_Final_Project.Pages
         {
             using (var context = new PlayerContext(serviceProvider.GetRequiredService<DbContextOptions<PlayerContext>>()))
             {
-                if (context.Player.Any())
+                if (context.Players.Any())
                 {
                     return;
                 }
 
-                context.Player.AddRange(
+                context.Players.AddRange(
 
                     new Player
                     {

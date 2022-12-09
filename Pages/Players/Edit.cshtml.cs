@@ -3,12 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace CIDM_3312_Final_Project.Pages;
-{
-    public class EditModel : PageModel
+public class EditModel : PageModel
     {
         private readonly CIDM_3312_Final_Project.Models.PlayerContext _context;
 
-        public EditModel(CIDM_3312_Final_Project.Models.PlayerContext context)
+        public EditModel (CIDM_3312_Final_Project.Pages.PlayerContext context)
         {
             _context = context;
         }
@@ -38,9 +37,6 @@ namespace CIDM_3312_Final_Project.Pages;
             {
                 return Page();
             }
-
-            _context.Attach(Player).State = EntityState.Modified;
-
             try
             {
                 await _context.SaveChangesAsync();

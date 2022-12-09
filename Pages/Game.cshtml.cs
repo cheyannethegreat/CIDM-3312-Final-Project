@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace CIDM_3312_Final_Project.Pages;
-{
     public class GameModel : PageModel
     {
         private readonly PlayerContext _context;
@@ -28,5 +27,4 @@ namespace CIDM_3312_Final_Project.Pages;
         }
         return Page();
     }
-}
 }
